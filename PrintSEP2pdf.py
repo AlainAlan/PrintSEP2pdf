@@ -87,7 +87,8 @@ def print_it(url,number):
      driver.find_element_by_xpath('//body').send_keys(Keys.HOME)
      time.sleep(1)
 # https://stackoverflow.com/questions/30937153/selenium-send-keys-what-element-should-i-use
-     head = driver.find_element_by_xpath('//*[@id="aueditable"]/h1')
+#      head = driver.find_element_by_xpath('//*[@id="aueditable"]/h1')
+     head = driver.find_element_by_xpath('//*/h1')
      pdfname = str(number) + ' ' + head.text + '.pdf'
      print(pdfname)
      script_here = "document.title='" + pdfname + "';window.print();"
